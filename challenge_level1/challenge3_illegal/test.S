@@ -15,13 +15,14 @@ illegal_instruction:
   j fail
   TEST_PASSFAIL
 
-  .align 8
   .global mtvec_handler
 mtvec_handler:
   li t1, CAUSE_ILLEGAL_INSTRUCTION
   csrr t0, mcause
   bne t0, t1, fail
   csrr t0, mepc
+  addi t0,t0,8
+  csrw mepc, t0
 
   mret
 
