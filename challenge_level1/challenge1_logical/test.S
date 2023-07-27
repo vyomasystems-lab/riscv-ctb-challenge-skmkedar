@@ -1,7 +1,7 @@
 # See https://gitlab.com/vyoma_systems/common/-/blob/main/LICENSE.vyoma for more details
  
-#include "./common/riscv_test.h"
-#include "./common/test_macros.h"
+#include "riscv_test.h"
+#include "test_macros.h"
 
 RVTEST_RV32M
 RVTEST_CODE_BEGIN
@@ -4983,7 +4983,7 @@ RVTEST_CODE_BEGIN
 	and s3, s5, t0
 	and s8, t5, t4
 	and tp, t0, s9
-	and s5, t1, s0
+	andi s5, t1, 0
 	and a0, t4, ra
 	and s4, a4, a6
 	and s11, s4, s6
