@@ -207,7 +207,6 @@ data-hazards:
 program-macro:
   pre_program_macro: "add x0,x0,x0"
   post_program_macro: "li gp,1; \n sw gp, tohost, t5;\n fence.i;\n li t6,  0x20000; \n la t5, begin_signature; \n sw t5, 0(t6); \n la t5, end_signature \n sw t5, 8(t6); \n sw t5,  12(t6);"        
-
   #post_program_macro: "add x0,x0,x0"
   pre_branch_macro: "add x0,x0,x0"
   post_branch_macro: "add x0,x0,x0"
